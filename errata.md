@@ -1,8 +1,8 @@
-# Errata for *Build Your Own 2D Game Engine and Create Great Web Games*
+# Errata for *Analytics Optimization with Columnstore Indexes in Microsoft SQL Server*
 
-On **page xx** [Summary of error]:
+On **page 93** [code]:
  
-Details of error here. Highlight key pieces in **bold**.
+This join misses clause on partition_number: LEFT JOIN sys.internal_partitions ON internal_partitions.object_id = tables.object_id should be: LEFT JOIN sys.internal_partitions ON internal_partitions.object_id = tables.object_id AND internal_partitions.partition_number = column_store_row_groups.partition_number.
 
 ***
 
